@@ -1,0 +1,115 @@
+// Основные переменные
+$primary-color: #4a6da7;
+$secondary-color: #f8f9fa;
+$accent-color: #28a745;
+$danger-color: #dc3545;
+$text-color: #333;
+$border-color: #ddd;
+$shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+// Сброс стилей
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: #f5f5f5;
+}
+
+// Основной контейнер приложения
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// Заголовок приложения
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $border-color;
+
+  h1 {
+    font-size: 24px;
+    color: $primary-color;
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: $text-color;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        color: $danger-color;
+      }
+    }
+  }
+}
+
+// Основной контент
+.app-content {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: $shadow;
+  padding: 20px;
+}
+
+// Общие стили для кнопок
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid $border-color;
+  background-color: white;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// Состояния загрузки и ошибок
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: $primary-color;
+}
+
+.error {
+  color: $danger-color;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid $danger-color;
+  border-radius: 4px;
+  background-color: rgba($danger-color, 0.1);
+}
